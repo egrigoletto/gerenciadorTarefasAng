@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TarefaRoutes } from './tarefas';
 
-export const routes: Routes = [ ];
+// rotas padrão
+export const routes: Routes = [
+       {
+            // manda na URL padrão, ou seja /
+        path: '',
+        redirectTo: '/tarefas/listar',
+        pathMatch: 'full'
+       },
+    ...TarefaRoutes
+];
 
 @NgModule({
     declarations: [],
